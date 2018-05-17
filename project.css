@@ -1,17 +1,39 @@
-ul #flex-container {
+ul#flex-container {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: row;
+
 }
 
 ul li {
-    height: 70px;
+    height: 800px;
+    width: 25%;
     padding-top: 10px;
     color: white;
     font-weight: bold;
     font-size: 1em;
     text-align: center;
+    justify-content: space-between;
 }
 
 ul li:first-child {
+    background-image: url("resources/ploegen.png");
+    background-repeat: no-repeat;
+}
+
+ul li:nth-child(2) {
+    background-image: url("resources/stadion.png");
+    background-repeat: no-repeat;
+}
+
+ul li:nth-child(3) {
+    background-image: url("resources/opstelling.png");
+    background-repeat: no-repeat;
+}
+
+ul li:nth-child(4) {
+    background-image: url("resources/beker.png");
+    background-repeat: no-repeat;
 }
