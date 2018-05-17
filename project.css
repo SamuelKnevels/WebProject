@@ -4,18 +4,21 @@ ul#flex-container {
     padding: 0px;
     display: flex;
     flex-direction: row;
-
 }
-
+body{
+    margin: 0%;
+}
 ul li {
-    height: 800px;
+    height: 464px;
     width: 25%;
-    padding-top: 10px;
+    padding-top: 400px;
     color: white;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 3em;
+    font-family: "Bookman Old Style";
     text-align: center;
-    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
 }
 
 ul li:first-child {
@@ -36,4 +39,9 @@ ul li:nth-child(3) {
 ul li:nth-child(4) {
     background-image: url("resources/beker.png");
     background-repeat: no-repeat;
+    background-position: left;
+}
+
+ul li:hover {
+    color: deepskyblue;
 }
