@@ -6,12 +6,12 @@
     <link href="stadions.css" rel="stylesheet">
     <script src="../resources/stadions/stadions.js"></script>
 </head>
-<body onload="myMap()">
+<body>
     <figure>
         <img src="../resources/logo_wk_2018.png">
     </figure>
     <div id="map" style="width:100%;height:800px;background:black"></div>
-
+    <dialog><h3 id=stadionnaam"></h3></dialog>
     <script>
         function myMap() {
             var mapOptions = {
@@ -19,12 +19,20 @@
                 zoom: 5,
                 mapTypeId: google.maps.MapTypeId.HYBRID
             }
+            var icon = {
+                url: "../resources/icon_stadion.png", // url
+                scaledSize: new google.maps.Size(50, 50), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+                anchor: new google.maps.Point(0, 0) // anchor
+            };
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            for(lets=0;s<stadions.length;s++){
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+            for(let s=0;s<stadions.length;s++){
                 let stadion = stadions[s];
-                let
-                var Marker = new google.maps.marker({
-                    position: {stadion:lat, stadion:lang},
+                let stadionLocatie = new google.maps.LatLng(stadion.lat,stadion.long);
+                var Marker = new google.maps.Marker({
+                    position: stadionLocatie,
+                    icon: icon,
                     map: map
                 });
             }
