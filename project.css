@@ -9,16 +9,25 @@ body{
     margin: 0%;
 }
 ul li {
-    height: 464px;
+    /*height: 464px;*/
     width: 25%;
-    padding-top: 400px;
+    padding-top: 200px;
     color: white;
     font-weight: bold;
     font-size: 3em;
     font-family: "Bookman Old Style";
     text-align: center;
+
     background-size: cover;
     background-position: center;
+
+    justify-content: space-between;
+    background-size: cover;
+
+}
+
+html, body, #container, #flex-container {
+    height: 100%;
 }
 
 ul li:first-child {
@@ -42,6 +51,7 @@ ul li:nth-child(3) {
 ul li:nth-child(4) {
     background-image: url("resources/beker.png");
     background-repeat: no-repeat;
+
     background-position: left;
     filter: grayscale(75%);
 }
@@ -49,4 +59,18 @@ ul li:nth-child(4) {
 ul li:hover {
     color: deepskyblue;
     filter: grayscale(0%);
+}
+
+.clock {
+    border: solid white 3px;
+    font-size: 3em;
+    color: white;
+    font-family: "Bookman Old Style";
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    margin: 0%;
+    width: 30%;
+    left: 35%;
+    background-color: black;
 }
