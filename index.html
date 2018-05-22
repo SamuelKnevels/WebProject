@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>HomePagina</title>
     <link href="project.css" rel="stylesheet">
+
 </head>
 <body>
+    <p class="clock" id="demo"><br></p>
+</div>
 
     <div id="container">
         <ul id="flex-container">
@@ -14,10 +17,38 @@
             <li>Opstelling</li>
             <li>Simulatie</li>
         </ul>
+
     </div>
 
     <header style="position: absolute; margin-left: 500px; ">
         <img src="resources/logo_wk_2018.png" style="width: 500px; height: 120px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
     </header>
+
+
+    <script>
+        var countDownDate = new Date("Jun 17, 2018 15:37:25").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+
 </body>
 </html>

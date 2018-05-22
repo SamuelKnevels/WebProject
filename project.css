@@ -17,8 +17,13 @@ ul li {
     font-size: 3em;
     font-family: "Bookman Old Style";
     text-align: center;
+<<<<<<< Updated upstream
     background-size: cover;
     background-position: center;
+=======
+    justify-content: space-between;
+    background-size: cover;
+>>>>>>> Stashed changes
 }
 
 ul li:first-child {
@@ -42,6 +47,7 @@ ul li:nth-child(3) {
 ul li:nth-child(4) {
     background-image: url("resources/beker.png");
     background-repeat: no-repeat;
+<<<<<<< Updated upstream
     background-position: left;
     filter: grayscale(75%);
 }
