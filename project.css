@@ -24,15 +24,18 @@ ul li {
 ul li:first-child {
     background-image: url("resources/ploegen.png");
     background-repeat: no-repeat;
+    filter: grayscale(75%);
 }
 
 ul li:nth-child(2) {
     background-image: url("resources/stadion.png");
     background-repeat: no-repeat;
+    filter: grayscale(75%);
 }
 
 ul li:nth-child(3) {
     background-image: url("resources/opstelling.png");
+    filter: grayscale(75%);
     background-repeat: no-repeat;
 }
 
@@ -40,8 +43,10 @@ ul li:nth-child(4) {
     background-image: url("resources/beker.png");
     background-repeat: no-repeat;
     background-position: left;
+    filter: grayscale(75%);
 }
 
 ul li:hover {
     color: deepskyblue;
+    filter: grayscale(0%);
 }
