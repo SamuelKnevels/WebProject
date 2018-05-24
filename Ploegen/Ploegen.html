@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ploegen</title>
+    <link href="Ploegen.css" rel="stylesheet">
+</head>
+<body>
+<figure style="margin-top: 0%; position: absolute; width: 10%; left: 60%;">
+    <img src="../resources/logo_wk_2018.png" style="width: 300px; height: 100px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
+</figure>
+    <div style="border: solid black 2px; width: 500px; border-radius: 10px;">
+    <label>Naam: </label>
+        <input type="text" placeholder="naam land" id="naam">
+        <br>
+        <label>Shortcode: </label>
+        <input type="text" placeholder="shortcode land" id="shortcode">
+        <br>
+        <label>Beschrijving: </label>
+        <input type="text" placeholder="Beschrijving" id="beschrv">
+        <br>
+        <input type="button" value="Toevoegen" style="margin-left: 10px" onclick="voegToe()">
+    </div>
+    <div id="landen">
+
+    </div>
+    <script>
+        function voegToe() {
+            let k = document.createElement("div");
+            let img = document.createElement("img");
+            let titel = document.createElement("h2");
+            titel.innerHTML = document.getElementById("naam").value;
+            let beschrijving = document.createElement("p");
+            let short = document.getElementById("shortcode").value;
+            beschrijving.innerHTML = document.getElementById("beschrv").value;
+            img.src = "../resources/landen/" + short + ".png";
+            k.classList.add("landenblok");
+            img.classList.add("imgpos");
+            titel.classList.add("titelpos");
+            beschrijving.classList.add("beschrpos");
+            k.appendChild(img);
+            k.appendChild(titel);
+            k.appendChild(beschrijving);
+
+            document.getElementById("landen").appendChild(k);
+        }
+
+    </script>
+</body>
+</html>

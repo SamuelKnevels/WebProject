@@ -1,0 +1,42 @@
+body {
+    font-family: "Bookman Old Style";
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+.landenblok {
+    margin-top: 10px;
+    margin-left: 20px;
+    border: solid black 2px;
+    border-radius: 10px;
+    height: 130px;
+    width: 300px;
+}
+
+.titelpos {
+    float: left;
+
+
+}
+
+.imgpos {
+    float: left;
+    margin-right: 10px;
+    border: solid gray 2px;
+    width: 80px;
+    height: 80px;
+}
+
+.beschrpos {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 70px;
+}
