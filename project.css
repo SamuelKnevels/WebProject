@@ -74,3 +74,11 @@ ul li:hover {
     left: 35%;
     background-color: black;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: deepskyblue;
+    filter: grayscale(0%);
+}
