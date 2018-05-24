@@ -11,7 +11,7 @@
         <img src="../resources/logo_wk_2018.png">
     </figure>
     <div id="map" style="width:100%;height:800px;background:black"></div>
-    <dialog><h3 id=stadionnaam"></h3></dialog>
+    <dialog id="dialog"><h3 id="stadionnaam"></h3><figure id="stadionfoto"><img id="foto" src=""></figure><h3 id="locatietitel">Locatie</h3><p id="locatie"></p><h3 id="capaciteittitel">Capaciteit</h3><p id="capaciteit"></p><button id="sluitknop" onclick="sluitDialog()">Sluiten</button></dialog>
     <script>
         function myMap() {
             var mapOptions = {
@@ -35,7 +35,20 @@
                     icon: icon,
                     map: map
                 });
+                Marker.addListener("click", function() {
+                   showDialog(stadion);
+                });
             }
+        }
+        function showDialog(stadion) {
+            document.getElementById("stadionnaam").innerHTML = stadion.name;
+            document.getElementById("foto").src = stadion.img;
+            document.getElementById("locatie").innerHTML = stadion.city;
+            document.getElementById("capaciteit").innerHTML = stadion.cap;
+            document.getElementById("dialog").style.display = "block";
+        }
+        function sluitDialog() {
+            document.getElementById("dialog").style.display = "none";
         }
     </script>
 

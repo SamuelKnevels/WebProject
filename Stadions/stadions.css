@@ -6,3 +6,9 @@ img{
     width: 300px;
     height: 100px;
 }
+
+dialog{
+    display: none;
+    position: absolute;
+    top: 250px;
+}
