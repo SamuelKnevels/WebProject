@@ -1,5 +1,5 @@
 .divspelers {
-    width: 400px;
+    width: 20%;
     height: 830px;
     overflow-y: scroll;
     border: solid gray 1px;
@@ -38,8 +38,64 @@
     border-radius: 8px;
 }
 .cirkel {
-    border: 1px dashed black;
+    border: 1px dashed white;
     width: 100px;
     height: 100px;
     border-radius: 50px;
+    background-size: cover;
+}
+.cirkel1 {
+    position: absolute;
+    left: 40%;
+    top: 16%;
+}
+.cirkel2 {
+    position: absolute;
+    left: 70%;
+    top: 16%;
+}
+.cirkel3 {
+    position: absolute;
+    left: 30%;
+    top: 34%;
+}
+.cirkel4 {
+    position: absolute;
+    left: 55%;
+    top: 34%;
+}
+.cirkel5 {
+    position: absolute;
+    left: 80%;
+    top: 34%;
+}
+.cirkel6 {
+    position: absolute;
+    left: 40%;
+    top: 52%;
+}
+.cirkel7 {
+    position: absolute;
+    left: 70%;
+    top: 52%;
+}
+.cirkel8 {
+    position: absolute;
+    left: 30%;
+    top: 70%;
+}
+.cirkel9 {
+    position: absolute;
+    left: 55%;
+    top: 70%;
+}
+.cirkel10 {
+    position: absolute;
+    left: 80%;
+    top: 70%;
+}
+.cirkel11 {
+    position: absolute;
+    left: 55%;
+    top: 88%;
 }
