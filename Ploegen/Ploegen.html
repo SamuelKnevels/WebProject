@@ -7,7 +7,9 @@
 </head>
 <body>
 <figure style="margin-top: 0%; position: absolute; width: 10%; left: 60%;">
+    <a href="../index.html">
     <img src="../resources/logo_wk_2018.png" style="width: 300px; height: 100px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
+    </a>
 </figure>
     <div style="border: solid black 2px; width: 500px; border-radius: 10px;">
     <label>Naam: </label>
@@ -17,34 +19,67 @@
         <input type="text" placeholder="shortcode land" id="shortcode">
         <br>
         <label>Beschrijving: </label>
-        <input type="text" placeholder="Beschrijving" id="beschrv">
+        <input type="text" placeholder="Beschrijving" id="beschrijving">
         <br>
-        <input type="button" value="Toevoegen" style="margin-left: 10px" onclick="voegToe()">
+        <input type="button" value="Toevoegen" style="margin-left: 10px" onclick="Toevoegen()">
+        <input type="button" value="Clear" onclick="Clearer()">
     </div>
     <div id="landen">
 
     </div>
     <script>
-        function voegToe() {
-            let k = document.createElement("div");
-            let img = document.createElement("img");
-            let titel = document.createElement("h2");
-            titel.innerHTML = document.getElementById("naam").value;
-            let beschrijving = document.createElement("p");
-            let short = document.getElementById("shortcode").value;
-            beschrijving.innerHTML = document.getElementById("beschrv").value;
-            img.src = "../resources/landen/" + short + ".png";
-            k.classList.add("landenblok");
-            img.classList.add("imgpos");
-            titel.classList.add("titelpos");
-            beschrijving.classList.add("beschrpos");
-            k.appendChild(img);
-            k.appendChild(titel);
-            k.appendChild(beschrijving);
+            let landenArray = JSON.parse(localStorage.getItem('landen')) || [];
+            console.log(landenArray);
+            updateLanden();
+            function Toevoegen() {
 
-            document.getElementById("landen").appendChild(k);
-        }
+                let naam = document.getElementById("naam").value;
+                let shortcode = document.getElementById("shortcode").value;
+                let beschrijving = document.getElementById("beschrijving").value;
 
+                let land = {name: naam, code: shortcode, desc: beschrijving};
+                landenArray.push(land);
+
+                document.getElementById("landen").innerHTML = "";
+
+                updateLanden();
+
+
+            }
+
+            function updateLanden() {
+                if (!localStorage)
+                    return;
+
+                for (let i = 0; i < landenArray.length; i++) {
+                    let land = landenArray[i];
+
+                    var para = document.createElement("div");
+                    var image = document.createElement("img");
+                    image.src = "../resources/landen/" + land.code + ".png";
+                    var label = document.createElement("label");
+                    label.innerHTML = land.name;
+                    var label2 = document.createElement("label");
+                    label2.innerHTML = land.desc;
+
+
+                    para.appendChild(image);
+                    para.appendChild(label);
+                    para.appendChild(label2);
+
+                    para.classList.add("landenblok");
+                    image.classList.add("imgpos");
+                    label.classList.add("titelpos");
+                    label2.classList.add("beschrpos");
+                    document.getElementById("landen").appendChild(para);
+
+                    localStorage.setItem('landen', JSON.stringify(landenArray))
+                }
+            }
+
+            function Clearer(){
+                localStorage.clear();
+            }
     </script>
 </body>
 </html>

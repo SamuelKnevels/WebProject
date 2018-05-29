@@ -19,11 +19,12 @@ label {
     border-radius: 10px;
     height: 130px;
     width: 300px;
+    float: left;
 }
 
 .titelpos {
     float: left;
-
+    position: absolute;
 
 }
 
@@ -33,10 +34,11 @@ label {
     border: solid gray 2px;
     width: 80px;
     height: 80px;
+    border-radius: 10px;
 }
 
 .beschrpos {
-    position: absolute;
-    margin-left: 220px;
-    margin-top: 70px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 30px;
 }
